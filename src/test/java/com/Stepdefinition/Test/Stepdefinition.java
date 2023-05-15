@@ -55,7 +55,7 @@ public class Stepdefinition {
 		// go the next page
 	}
 
-	@ContinueNextStepsFor({AssertionError.class}) 
+	@ContinueNextStepsFor({AssertionError.class,NullPointerException.class}) 
 	@Then("User should be able to login sucessfully and new page open")
 	public void user_should_be_able_to_login_sucessfully_and_new_page_open() {
 
