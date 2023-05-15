@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
+import cucumber.api.java.ContinueNextStepsFor;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -54,6 +55,7 @@ public class Stepdefinition {
 		// go the next page
 	}
 
+	@ContinueNextStepsFor({AssertionError.class}) 
 	@Then("User should be able to login sucessfully and new page open")
 	public void user_should_be_able_to_login_sucessfully_and_new_page_open() {
 
